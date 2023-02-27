@@ -1,0 +1,16 @@
+<div *ngIf="gifsStream$" class="gif-grid-container container-scrollable" infiniteScroll [scrollWindow]="false" (scrolled)="onScroll()">
+  <mat-grid-list cols="4" rowHeight="425px" gutterSize="10px">
+    <mat-grid-tile *ngFor="let gif of gifsStream$ | async" [colspan]="1" [rowspan]="1" >
+      <div class="gif-item">
+        <div class="gif-header">
+          <button mat-icon-button (click)="toggleFavorite(gif)">
+            <mat-icon [ngClass]="{'favorite-icon': gif.isFavorite, 'normal-icon': !gif.isFavorite}">favorite</mat-icon>
+          </button>
+        </div>
+        <div class="gif-content">
+          <app-gif-card [gif]="gif"></app-gif-card>
+        </div>
+      </div>
+    </mat-grid-tile>
+  </mat-grid-list>
+</div>

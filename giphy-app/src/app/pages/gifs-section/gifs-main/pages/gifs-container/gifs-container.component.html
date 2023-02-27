@@ -1,1 +1,2 @@
-<p>gifs-container works!</p>
+<app-gif-search (searchQuery)="onSearch($event)" (viewFavorites)="viewFavorites()"></app-gif-search>
+<app-gif-grid [gifsStream$]="gifs$" (scrolled)="onScroll()" (isFavorite)="isFavorite($event)"></app-gif-grid>

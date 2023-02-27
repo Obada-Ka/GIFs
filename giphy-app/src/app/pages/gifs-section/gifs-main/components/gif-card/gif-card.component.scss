@@ -1,0 +1,102 @@
+.mat-expansion-panel-header img {
+  max-width: 100%;
+}
+
+.gif-details {
+  padding: 16px;
+}
+
+.image {
+  img {
+    max-width: 100%;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+  }
+}
+
+.image-container {
+  display: flex;
+  justify-content: center;
+}
+
+.card {
+  margin: 10px;
+  width: 300px;
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+}
+
+.card.is-loading {
+  .image,
+  h2,
+  p {
+    background: #eee;
+    background: linear-gradient(110deg, #ececec 8%, #f5f5f5 18%, #ececec 33%);
+    border-radius: 5px;
+    background-size: 200% 100%;
+    animation: 1.5s shine linear infinite;
+  }
+
+  .image {
+    height: 182px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+}
+
+span {
+  font-family: cursive;
+}
+
+p {
+  font-family: cursive;
+  color: white;
+}
+
+.main-expand-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.expand-container {
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s, opacity 0.5s linear;
+  .details-container{
+    padding: 12px;
+  }
+}
+
+
+.show-row {
+  .expand-container {
+    visibility: visible;
+    opacity: 1;
+    background: #1a237e;
+    border-radius: 10px;
+  }
+}
+
+.accordion ::ng-deep .mat-expansion-panel-header {
+  background: #f5ecec;
+}
+
+.accordion ::ng-deep .mat-expansion-panel {
+  background-color: rgb(237, 234, 234);
+}
+
+.accordion ::ng-deep .mat-expansion-panel {
+  border: 1px solid #d3bdbd;
+  margin: 5px !important;
+}
+
+.accordion ::ng-deep .mat-expansion-panel-content {
+  background-color: rgb(26, 35, 126);
+}
+
+@keyframes shine {
+  to {
+    background-position-x: -200%;
+  }
+}

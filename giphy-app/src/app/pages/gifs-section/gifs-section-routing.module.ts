@@ -3,7 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 
 const routes: Routes = [
   {
-    path: 'gifs',
+    path: '',
     loadChildren: () =>
       import('./gifs-main/gifs-main.module').then((m) => m.GifsMainModule),
   },

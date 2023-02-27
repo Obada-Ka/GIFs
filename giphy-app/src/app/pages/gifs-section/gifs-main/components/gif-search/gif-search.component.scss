@@ -1,0 +1,54 @@
+.search-container{
+  margin-bottom: 5px;
+}
+
+.mat-toolbar {
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+  .spacer {
+    flex: 1 1 auto;
+  }
+  span {
+    font-family: cursive;
+    color: white;
+  }
+}
+
+.mat-toolbar-row {
+  position: fixed;
+  z-index: 99;
+  background-color: #1a237e;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+.nav-note {
+  margin-left: 50px;
+  span:first-child {
+    color: #ff49e9;
+    font-family: fangsong;
+  }
+  span:last-child {
+    color: #b4ff00;
+    font-family: fantasy;
+  }
+}
+
+.custom-mat-field {
+  input[type="text"] {
+    font-size: 15px;
+    font-family: cursive;
+  }
+  ::ng-deep mat-icon {
+    font-size: 16px;
+  }
+  .search-btn ::ng-deep mat-icon {
+    line-height: 1;
+    font-size: 24px;
+  }
+  input::placeholder {
+    color: white;
+    font-size: 15px;
+    font-family: cursive;
+  }
+}

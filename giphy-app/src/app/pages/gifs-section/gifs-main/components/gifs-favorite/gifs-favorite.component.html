@@ -1,0 +1,13 @@
+<div class="toolbar-favorite">
+    <h2 mat-dialog-title>My Favorites</h2>
+</div>
+<mat-dialog-content>
+    <mat-grid-list cols="4" rowHeight="500px" gutterSize="10px">
+        <mat-grid-tile *ngFor="let gif of data" [colspan]="1" [rowspan]="1" >
+            <app-gif-card [gif]="gif"></app-gif-card>
+        </mat-grid-tile>
+    </mat-grid-list>
+</mat-dialog-content>
+<mat-dialog-actions>
+    <button mat-button (click)="close()">Close</button>
+</mat-dialog-actions>

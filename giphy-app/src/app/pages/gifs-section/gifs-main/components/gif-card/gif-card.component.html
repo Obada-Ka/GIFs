@@ -1,0 +1,24 @@
+<ng-container *ngIf="isLoading">
+    <div class="card is-loading">
+        <div class="image"></div>
+    </div>
+</ng-container>
+<div class="image image-container">
+    <img src="{{gif.images.fixed_height.url}}" [hidden]="isLoading" alt="{{gif.title}}" (load)="handleLoading()">
+</div>
+
+<div class="main-expand-container">
+    <button mat-button (click)="isExpaned = !isExpaned"><span>Click for more details</span><mat-icon aria-label="expand_more">expand_more</mat-icon></button>
+    
+    <div [ngClass]="{'show-row': isExpaned }">
+        <div class="expand-container">
+            <div class="details-container">
+                <p><strong>User:</strong> {{gif.username ? gif.username : 'No name found'}}</p>
+                <p><strong>Rating:</strong> {{gif?.rating}}</p>
+                <p><strong>Created:</strong> {{gif?.createDateTime}}</p>
+                <p><strong>Updated:</strong> {{gif?.updateDateTime}}</p>
+            </div>
+
+        </div>
+    </div>
+</div>

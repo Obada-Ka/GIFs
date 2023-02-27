@@ -1,0 +1,33 @@
+.toolbar-favorite {
+  padding: 10px;
+  background-color: #1a237e;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+  h2 {
+    margin: 0 0;
+    font-family: cursive;
+    color: white;
+  }
+  span {
+    font-family: cursive;
+    color: white;
+  }
+}
+
+::ng-deep .favorite-dialog {
+    .mat-dialog-container {
+        padding: 0px;
+        overflow: hidden;
+    }
+    .mat-dialog-actions {
+        button {
+            border: 1px solid white;
+        }
+        padding-left: 10px;
+        margin: 0px;
+        color: white;
+        background-color: #1a237e;
+    }
+}
+
+
